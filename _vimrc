@@ -78,4 +78,8 @@ cnoremap <A-j> <Down>
 cnoremap <A-k> <Up>
 cnoremap <A-l> <Right>
 
-
+"tabstop 將 tab 的寬度設定為 4 個字元寬
+"shiftwidth 是設定縮排的寬度
+"expandtab 可以將 tab 直接轉換為等寬的空白(因為不同編輯器顯示寬度不同)
+"可以下 retab 指令把tab轉換成空白字元
+set tabstop=4 shiftwidth=4 expandtab
