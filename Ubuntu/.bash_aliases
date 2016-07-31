@@ -13,3 +13,5 @@ alias toptenmem='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 alias top10mem='top -b -o +%MEM | head -n 17'
 alias top10cpu='top -b -o +%CPU | head -n 17'
 
+# Find All installed packages
+alias installedpackages="cat /var/log/dpkg.log | awk '{print \$3,\$4}' | grep '^install' | awk '{print \$2}' | awk -F ':' '{print \$1}'"
