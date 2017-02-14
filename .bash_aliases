@@ -1,3 +1,5 @@
+# Put this to your Home directory 
+
 # Check top process sorted by RAM or CPU
 
 alias toptencpu='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head'
@@ -13,3 +15,8 @@ alias toptenmem='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 alias top10mem='top -b -o +%MEM | head -n 17'
 alias top10cpu='top -b -o +%CPU | head -n 17'
 
+alias alias='alias -P'
+alias lsblk='lsblk -f'
+
+#pssswd -s <username>
+#shuf or sort -R
