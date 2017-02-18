@@ -19,3 +19,8 @@ vcgencmd get_mem arm && vcgencmd get_mem gpu
 
 echo "-------------------------------------------"
 echo "$(cat /proc/device-tree/model)"
+
+if test -d /proc/device-tree && which vcgencmd
+then
+    echo "This device is Raspberry Pi"
+fi
