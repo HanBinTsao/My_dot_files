@@ -120,3 +120,5 @@ fi
 # Refer: http://b.sricola.com/post/16174981053/bash-autocomplete-for-ssh
 complete -W "$(echo $(grep '^ssh ' .bash_history | sort -u | sed 's/^ssh //'))" ssh
 
+# To print the time stamp accociated with each displayed hitory entry
+export HISTTIMEFORMAT="%d-%m-%y %T "
