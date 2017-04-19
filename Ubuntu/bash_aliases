@@ -3,6 +3,11 @@
 alias toptencpu='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head'
 alias toptenmem='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 
+#ps aux --sort rss
+#ps aux --sort -rss
+
+#ps aux --sort pcpu
+#ps aux --sort -pcpu
 
 # Find Top 15 Processes by Memory Usage with ‘top’ in Batch Mode
 # -b : runs top in batch mode
@@ -13,10 +18,13 @@ alias toptenmem='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 alias top10mem='top -b -o +%MEM | head -n 17'
 alias top10cpu='top -b -o +%CPU | head -n 17'
 
-# Find All installed packages
+# Memory usage by process
+function memusage(){
+    ps aux | grep $1 | awk '{ total += $6; } END { print total/1024"MB" }' 
+}
 
+# Find All installed packages
 alias installedpackages="cat /var/log/dpkg.log | awk '{print \$3,\$4}' | grep '^install' | awk '{print \$2}' | awk -F ':' '{print \$1}'"
 
 # Lazy update
-
 alias update="sudo apt update && sudo apt upgrade -y"
