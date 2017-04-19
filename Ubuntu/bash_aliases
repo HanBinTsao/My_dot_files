@@ -3,6 +3,7 @@
 alias toptencpu='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head'
 alias toptenmem='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 
+# https://blog.longwin.com.tw/2017/04/linux-ps-process-show-cpu-memory-2017/
 #ps aux --sort rss
 #ps aux --sort -rss
 
