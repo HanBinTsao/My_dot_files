@@ -24,7 +24,7 @@ function memusage(){
     ps aux | grep $1 | awk '{ total += $6; } END { print total/1024"MB" }' 
 }
 
-# Find All installed packages
+# Find All installed packages ( User installed, not all packages in system, you should use "apt list --installed")
 alias installedpackages="cat /var/log/dpkg.log | awk '{print \$3,\$4}' | grep '^install' | awk '{print \$2}' | awk -F ':' '{print \$1}'"
 
 # Lazy update
