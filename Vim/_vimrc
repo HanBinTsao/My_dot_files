@@ -78,8 +78,14 @@ cnoremap <A-j> <Down>
 cnoremap <A-k> <Up>
 cnoremap <A-l> <Right>
 
-"tabstop ±N tab ªº¼e«×³]©w¬° 4 ­Ó¦r¤¸¼e
-"shiftwidth ¬O³]©wÁY±Æªº¼e«×
-"expandtab ¥i¥H±N tab ª½±µÂà´«¬°µ¥¼eªºªÅ¥Õ(¦]¬°¤£¦P½s¿è¾¹Åã¥Ü¼e«×¤£¦P)
-"¥i¥H¤U retab «ü¥O§âtabÂà´«¦¨ªÅ¥Õ¦r¤¸
-set tabstop=4 shiftwidth=4 expandtab
+"tabstop ¿ tab ¿¿¿¿¿¿ 4 ¿¿¿¿
+"shiftwidth ¿¿¿¿¿¿¿¿
+"expandtab ¿¿¿ tab ¿¿¿¿¿¿¿¿¿¿(¿¿¿¿¿¿¿¿¿¿¿¿¿)
+"¿¿¿ retab ¿¿¿tab¿¿¿¿¿¿¿
+" Use four space to replace tab, when use tab key, vim will automaticaly convert tab to 4 space
+syntax enable
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
