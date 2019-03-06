@@ -29,3 +29,6 @@ alias installedpackages="cat /var/log/dpkg.log | awk '{print \$3,\$4}' | grep '^
 
 # Lazy update
 alias update="sudo apt update && sudo apt upgrade -y"
+
+# display much clear output
+alias mount="mount | column -t"
