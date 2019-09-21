@@ -35,5 +35,8 @@ alias mount="mount | column -t"
 
 # Listing Docker Tags on the Command Line Using a Bash Alias
 function show-docker-img-tags(){
-    curl https://registry.hub.docker.com/v1/repositories/nginx/tags | tr -d '[]" ' | tr '}' '\n' | awk -F: '{print $3}'
+    local image="${1}"
+    curl -s https://registry.hub.docker.com/v1/repositories/${image}/tags \
+    | tr -d '[]" ' | tr '}' '\n' \
+    | awk -F: '{print $3}'
 }
