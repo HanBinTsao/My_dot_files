@@ -32,3 +32,8 @@ alias update="sudo apt update && sudo apt upgrade -y"
 
 # display much clear output
 alias mount="mount | column -t"
+
+# Listing Docker Tags on the Command Line Using a Bash Alias
+function show-docker-img-tags(){
+    curl https://registry.hub.docker.com/v1/repositories/nginx/tags | tr -d '[]" ' | tr '}' '\n' | awk -F: '{print $3}'
+}
