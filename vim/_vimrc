@@ -28,37 +28,38 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
-"¥H¤U¬O­Ó¤H³]©w
-"³]©w¦r«¬¤j¤p­I´º¦â
+"ä»¥ä¸‹æ˜¯å€‹äººè¨­å®š
+"è¨­å®šå­—å‹å¤§å°èƒŒæ™¯è‰²
 :colorscheme evening
 set guifont=Consolas:h14:cANSI
 
-"Åã¥Ü¦æ¼Æ©MÅã¥Ü¬Û¹ï¦æ¼Æ¡Cµ²ªG·|²V¦XÅã¥Ü¡C
-set number
-set relativenumber
+"é¡¯ç¤ºè¡Œæ•¸å’Œé¡¯ç¤ºç›¸å°è¡Œæ•¸ã€‚çµæœæœƒæ··åˆé¡¯ç¤ºã€‚
+"set number
+"set relativenumber
+set number relativenumber
 
-"³]©w¥ªÃä¦æ¼ÆÃC¦âÅã¥Ü¬°¦Ç¦â
+"è¨­å®šå·¦é‚Šè¡Œæ•¸é¡è‰²é¡¯ç¤ºç‚ºç°è‰²
 highlight LineNr guifg=#808080
 
-"³]©w·j´Mªº®É­Ô©¿²¤¤j¤p¼g
+"è¨­å®šæœå°‹çš„æ™‚å€™å¿½ç•¥å¤§å°å¯«
 set ic
 
-"¼Ğ°O´å¼Ğ©Ò¦bªº¦C
+"æ¨™è¨˜æ¸¸æ¨™æ‰€åœ¨çš„åˆ—
 set cursorline
 
-"ÀÉ®×¾D¨ä¥¦µ{¦¡§ó§ï®É·|¦Û°Ê­«·sÅª¨ú
+"æª”æ¡ˆé­å…¶å®ƒç¨‹å¼æ›´æ”¹æ™‚æœƒè‡ªå‹•é‡æ–°è®€å–
 set autoread
 
-"«öF3·s¼W¤@­Ó¤À­¶
-"«öF4Ãö±¼¤À­¶
-"«öF9¤W¤@­Ó¤À­¶
-"«öF10¤U¤@­Ó¤À­¶
+"æŒ‰F3æ–°å¢ä¸€å€‹åˆ†é 
+"æŒ‰F4é—œæ‰åˆ†é 
+"æŒ‰F9ä¸Šä¸€å€‹åˆ†é 
+"æŒ‰F10ä¸‹ä¸€å€‹åˆ†é 
 nmap <F3> :tabnew<cr>
 nmap <F4> :tabclose<cr>
 nmap <F9> gT
 nmap <F10> gt
 
-"ÅıGVIM¬İ°_¨Ó¹³¬OConsoleª©­±
+"è®“GVIMçœ‹èµ·ä¾†åƒæ˜¯Consoleç‰ˆé¢
 "see :h guioptions
 set guioptions+=c
 set guioptions-=e
@@ -66,7 +67,7 @@ set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 
-"¦binsert mode¸Ì²¾°Ê´å¼Ğ
+"åœ¨insert modeè£¡ç§»å‹•æ¸¸æ¨™
 inoremap <A-h> <C-o>h
 inoremap <A-j> <C-o>j
 inoremap <A-k> <C-o>k
